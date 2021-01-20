@@ -1,8 +1,10 @@
+<?php
+use Illuminate\Routing\Controller as BaseController;
 class Person extends BaseController{
    
-   $nome = "";
-   $cognome = "";
-   $eta = 0;
+   private $nome = "";
+   private $cognome = "";
+   private $eta = 0;
 
 public function __construct($nome, $cognome, $eta){
    $this->nome = $nome;
