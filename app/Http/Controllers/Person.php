@@ -11,13 +11,13 @@ public function __construct($nome, $cognome, $eta){
    $this->cognome = $cognome;
    $this->eta = $eta;
 }
-public function printNome($nome){
+public function getNome($nome){
    return $this->nome;
 }
-public function printCognome($cognome){
+public function getCognome($cognome){
    return $this->cognome;
 }
-public function printEta($eta){
+public function getEta($eta){
    return $this->eta;
 }
 }
