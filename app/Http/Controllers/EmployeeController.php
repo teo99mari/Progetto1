@@ -7,6 +7,10 @@ class EmployeeController extends PersonController {
     {
         $this->profilo = $profilo;
         $this->id = $id;
+        parent::setNome($nome);
+        parent::setCognome($cognome);
+        parent::setEta($eta);
+        parent::setAltezzaInMetri($altezzaInMetri);
     }
 
     public function getProfilo()
@@ -28,6 +32,4 @@ class EmployeeController extends PersonController {
     {
         $this->id = $id;
     }
-
-    public function
 }
