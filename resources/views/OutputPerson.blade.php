@@ -45,15 +45,14 @@
 </head>
 <body>
 <div class="main-block">
-    <h1>Registrazione impiegato</h1>
+    <h1>Riepilogo impiegato</h1>
     <form action="/person/add" method="POST">
         <hr>
-        <label>nome: </label><input type="text" name="nome" id="nome" placeholder="Nome" required/>
-        <label>cognome: </label><input type="text" name="cognome" id="cognome" placeholder="Cognome" required/>
-        <label>eta: </label><input type="text" name="eta" id="eta" placeholder="Età" required/>
-        <label>altezzaInMetri: </label><input type="text" name="altezzaInMetri" id="altezzaInMetri" placeholder="Altezza in metri" required/>
-        <label>profilo: </label><input type="text" name="profilo" id="profilo" placeholder="Profilo" required/>
-        <label>id: </label><input type="text" name="id" id="id" placeholder="id" required/>
+        <label>nome: </label><input type="text" name="nome" id="nome" value="{{$obj->getNome()}}" required/>
+        <label>cognome: </label><input type="text" name="cognome" id="cognome" value="{{$obj->getCognome()}}" required/>
+        <label>eta: </label><input type="text" name="eta" id="eta" required value="{{$obj->getEta()}}"/>
+        <label>altezzaInMetri: </label><input type="text" name="altezzaInMetri" id="altezzaInMetri" value="{{$obj->getAltezzaInMetri()}}" required/>
+        <label>profilo: </label><input type="text" name="profilo" id="profilo" value="{{$obj->getProfilo()}}" required/>
     </form>
 </div>
 </body>
