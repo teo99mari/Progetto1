@@ -14,13 +14,29 @@ class PersonController extends BaseController {
        $this->eta = $eta;
        $this->altezzaInMetri = $altezzaInMetri;
     }
-    public function getNome($nome){
+    public function getNome(){
        return $this->nome;
     }
-    public function getCognome($cognome){
+    public function getCognome(){
        return $this->cognome;
     }
-    public function getEta($eta){
+    public function getEta(){
        return $this->eta;
     }
+    public function getAltezzaInMetri(){
+       return $this->altezzaInMetri;
+    } 
+    public function setNome($nome){
+      $this->nome = $nome;
+    }
+    public function setCognome($cognome){
+       $this->cognome = $cognome;
+    }
+    public function setEta($eta){
+       $this->eta = $eta;
+    }
+    public function setAltezzaInMetri($AltezzaInMetri){
+       $this->altezzaInMetri = $altezzaInMetri;
+    }
+
 }
