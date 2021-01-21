@@ -18,5 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/person', function () {
-    return view('outputperson');
+    return view('InputPerson', ['patate' => 'ciao']);
 });
+
+Route::post('/person/add', 'App\Http\Controllers\PageController@person');
+

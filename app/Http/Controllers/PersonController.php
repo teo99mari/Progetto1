@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Http\Controllers;
 use Illuminate\Routing\Controller as BaseController;
 
 class PersonController extends BaseController {
@@ -8,7 +9,7 @@ class PersonController extends BaseController {
    private $eta;
    private $altezzaInMetri;
 
-    public function __construct(string $nome, string $cognome, int $eta, float $altezzaInMetri){
+    public function __construct( $nome,  $cognome,  $eta,  $altezzaInMetri){
        $this->nome = $nome;
        $this->cognome = $cognome;
        $this->eta = $eta;
@@ -25,7 +26,7 @@ class PersonController extends BaseController {
     }
     public function getAltezzaInMetri(){
        return $this->altezzaInMetri;
-    } 
+    }
     public function setNome($nome){
       $this->nome = $nome;
     }
@@ -35,7 +36,7 @@ class PersonController extends BaseController {
     public function setEta($eta){
        $this->eta = $eta;
     }
-    public function setAltezzaInMetri($AltezzaInMetri){
+    public function setAltezzaInMetri($altezzaInMetri){
        $this->altezzaInMetri = $altezzaInMetri;
     }
 

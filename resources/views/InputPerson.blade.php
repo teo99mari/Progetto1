@@ -17,7 +17,7 @@
       justify-content: center;
       height: 100%;
       }
-      body, div, h1, form, input, p { 
+      body, div, h1, form, input, p {
       padding: 0;
       margin: 0;
       outline: none;
@@ -39,14 +39,14 @@
       opacity: 0.3;
       }
       .main-block {
-      max-width: 340px; 
-      min-height: 460px; 
+      max-width: 340px;
+      min-height: 460px;
       padding: 10px 0;
       margin: auto;
-      border-radius: 5px; 
+      border-radius: 5px;
       border: solid 1px #ccc;
-      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-      background: #ebebeb; 
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+      background: #ebebeb;
       }
       form {
       margin: 0 30px;
@@ -100,11 +100,11 @@
       width: calc(100% - 57px);
       height: 36px;
       margin: 13px 0 0 -5px;
-      padding-left: 10px; 
+      padding-left: 10px;
       border-radius: 0 5px 5px 0;
-      border: solid 1px #cbc9c9; 
-      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-      background: #fff; 
+      border: solid 1px #cbc9c9;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+      background: #fff;
       }
       input[type=password] {
       margin-bottom: 15px;
@@ -117,9 +117,9 @@
       width: 100%;
       padding: 10px 0;
       margin: 10px auto;
-      border-radius: 5px; 
+      border-radius: 5px;
       border: none;
-      background: #1c87c9; 
+      background: #1c87c9;
       font-size: 14px;
       font-weight: 600;
       color: #fff;
@@ -131,16 +131,16 @@
 </head>
   <body>
     <div class="main-block">
-      <h1>Registrazione impiegato</h1>
-      <form action="/">
+      <h1>Registrazione impiegato - {{$patate}}</h1>
+      <form action="/person/add" method="POST">
         <hr>
         <input type="text" name="nome" id="nome" placeholder="Nome" required/>
         <input type="text" name="cognome" id="cognome" placeholder="Cognome" required/>
-        <input type="text" name="età" id="età" placeholder="Età" required/>
+        <input type="text" name="eta" id="eta" placeholder="Età" required/>
         <input type="text" name="altezzaInMetri" id="altezzaInMetri" placeholder="Altezza in metri" required/>
         <input type="text" name="profilo" id="profilo" placeholder="Profilo" required/>
         <div class="btn-block">
-          <button type="submit" href="/">Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>

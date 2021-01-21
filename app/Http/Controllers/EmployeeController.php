@@ -1,16 +1,15 @@
 <?php
 
+namespace App\Http\Controllers;
+
 class EmployeeController extends PersonController {
     private $profilo, $id;
 
-    public function __construct(string $profilo, int $id, string $nome, string $cognome, int $eta, float $altezzaInMetri)
+    public function __construct( $profilo,  $id,  $nome,  $cognome,  $eta,  $altezzaInMetri)
     {
         $this->profilo = $profilo;
         $this->id = $id;
-        parent::setNome($nome);
-        parent::setCognome($cognome);
-        parent::setEta($eta);
-        parent::setAltezzaInMetri($altezzaInMetri);
+        parent::__construct($nome, $cognome, $eta, $altezzaInMetri);
     }
 
     public function getProfilo()
