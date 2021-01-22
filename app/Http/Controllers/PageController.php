@@ -2,6 +2,7 @@
 
 
 namespace App\Http\Controllers;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PageController
@@ -16,6 +17,23 @@ class PageController
         $id = rand();
         $impiegato = new EmployeeController($profilo, $id, $nome, $cognome, $eta, $altezzaInMetri);
 
+        $impiegato2 = new user();
+        $impiegato2->nome = $nome;
+        $impiegato2->cognome = $cognome;
+        $impiegato2->eta = $eta;
+        $impiegato2->altezzaInMetri = $altezzaInMetri;
+        $impiegato2->profilo = $profilo;
+
+        $impiegato2->save();
+
+
         return view('OutputPerson', ['obj' => $impiegato]);
+ 
+    }
+
+    public function index(){
+        $utenti = User::query();
+           // return $utenti->get();
+        return view('UserList', ['impiegati' => $utenti->get()]);
     }
 }

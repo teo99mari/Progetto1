@@ -141,6 +141,7 @@
         <input type="text" name="profilo" id="profilo" placeholder="Profilo" required/>
         <div class="btn-block">
           <button type="submit">Submit</button>
+          <a href = "/person/list">Lista impiegati</a>
         </div>
       </form>
     </div>
