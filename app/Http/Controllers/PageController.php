@@ -15,9 +15,8 @@ class PageController
         $altezzaInMetri = $req->post('altezzaInMetri');
         $profilo = $req->post('profilo');
         $id = rand();
-        $impiegato = new EmployeeController($profilo, $id, $nome, $cognome, $eta, $altezzaInMetri);
 
-        $impiegato2 = new user();
+        $impiegato2 = new User();
         $impiegato2->nome = $nome;
         $impiegato2->cognome = $cognome;
         $impiegato2->eta = $eta;
@@ -25,15 +24,37 @@ class PageController
         $impiegato2->profilo = $profilo;
 
         $impiegato2->save();
-
+        $impiegato = new EmployeeController($profilo, $id, $nome, $cognome, $eta, $altezzaInMetri);
 
         return view('OutputPerson', ['obj' => $impiegato]);
- 
+
     }
 
-    public function index(){
-        $utenti = User::query();
-           // return $utenti->get();
+
+    public function index(Request $req)
+    {
+        $utenti = User::query(); //lista utenti presi dal database
+
+        if($req->has('profilo') && !empty($req->profilo)){
+            $utenti->where('profilo', 'like', $req->profilo);
+        }
+
+        //return $utenti->get();  //utenti->get()  ritorna l'array
         return view('UserList', ['impiegati' => $utenti->get()]);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

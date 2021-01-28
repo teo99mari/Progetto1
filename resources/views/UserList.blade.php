@@ -11,25 +11,34 @@
 
     <!-- Styles -->
     <style>
-     
+
 </style>
 </head>
 <body>
 <div class="main-block">
     <h1>Lista impiegati</h1>
     <ul>
+        <li>
+            inserisci profilo
+            <form action="/person/list" method="GET">
+                <input type="text" name="profilo" id="profilo">
+                <button type="submit">cerca</button>
+            </form>
+
+        </li>
         <li>nome-cognome-eta-altezzaInMetri-profilo</li>
         @foreach($impiegati as $impiegato)
             <li>
-                <p>{{$impiegato->nome}}, 
-                {{$impiegato->cognome}},
-                {{$impiegato->eta}},
-                {{$impiegato->altezzaInMetri}},
-                {{$impiegato->profilo}} 
+                <p>{{$impiegato->nome}},
+                    {{$impiegato->cognome}},
+                    {{$impiegato->eta}},
+                    {{$impiegato->altezzaInMetri}},
+                    {{$impiegato->profilo}}
                 </p>
             </li>
         @endforeach
-    </ul>   
+    </ul>
+    <a href="/person">inserisci un impiegato</a>
 </div>
 </body>
 </html>

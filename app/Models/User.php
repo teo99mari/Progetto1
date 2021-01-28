@@ -39,6 +39,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        
+
     ];
+    /**
+     * @var array|mixed|string|null
+     */
 }
