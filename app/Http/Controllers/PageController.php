@@ -24,10 +24,12 @@ class PageController
         $impiegato2->profilo = $profilo;
 
         $impiegato2->save();
-
         $impiegato = new EmployeeController($profilo, $id, $nome, $cognome, $eta, $altezzaInMetri);
+
         return view('OutputPerson', ['obj' => $impiegato]);
+
     }
+
 
     public function index(Request $req)
     {

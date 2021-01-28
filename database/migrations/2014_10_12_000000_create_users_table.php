@@ -18,7 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('nome');
             $table->string('cognome');
             $table->unsignedBigInteger('eta');
+<<<<<<< HEAD
             $table->decimal('altezzaInMetri',8,2);
+=======
+            $table->decimal('altezzaInMetri', 8, 2);
+>>>>>>> 2226fff4f9873893faf44f284b7055df19d58c46
             $table->string('profilo');
             $table->rememberToken();
             $table->timestamps();
