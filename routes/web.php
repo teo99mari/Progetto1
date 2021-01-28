@@ -23,4 +23,4 @@ Route::get('/person', function () {
 
 Route::post('/person/add', 'App\Http\Controllers\Person\PageController@person');
 
-Route::get('/person/list', 'App\Http\Controllers\Person\PageController@index');
+Route::get('/person/list', 'App\Http\Controllers\Person\ListController@run');
