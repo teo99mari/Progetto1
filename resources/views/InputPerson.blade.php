@@ -143,7 +143,6 @@
           <button type="submit">Submit</button>
           <a href = "/person/list">Lista impiegati</a>
         </div>
-          <a href="/person/list">lista impiegati</a>
       </form>
     </div>
   </body>
