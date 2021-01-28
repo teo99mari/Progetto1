@@ -142,6 +142,7 @@
         <div class="btn-block">
           <button type="submit">Submit</button>
         </div>
+          <a href="/person/list">lista impiegati</a>
       </form>
     </div>
   </body>
