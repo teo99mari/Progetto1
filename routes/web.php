@@ -23,4 +23,6 @@ Route::get('/person', function () {
 
 Route::post('/person/add', 'App\Http\Controllers\Person\PageController@person');
 
+Route::post('/person/update', 'App\Http\Controllers\Person\UpdateController@run');
+
 Route::get('/person/list', 'App\Http\Controllers\Person\ListController@run');
