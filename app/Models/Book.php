@@ -2,12 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class Book extends Model
 {
     use HasFactory, Notifiable;
 
@@ -17,11 +16,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nome',
-        'cognome',
-        'eta',
-        'altezzaInMetri',
-        'profilo',
+        'titolo',
+        'pagine',
+        'editore'
     ];
 
     /**
@@ -41,12 +38,13 @@ class User extends Authenticatable
     protected $casts = [
 
     ];
+
     /**
      * @var array|mixed|string|null
      */
 
-    public function books()
+    public function users()
     {
-        return $this->belongsToMany(Book::class); //di default si aspetta che la tabella pivot abbia come nome i nomi delle due tabelle presi in ordine alfabetico
+        return $this->belongsToMany(User::class);
     }
 }

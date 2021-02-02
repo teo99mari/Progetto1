@@ -21,6 +21,8 @@ Route::get('/person', function () {
     return view('InputPerson', ['patate' => 'ciao']);
 });
 
+Route::get('/person/prova', 'App\Http\Controllers\Person\SearchController@run');
+
 Route::post('/person/add', 'App\Http\Controllers\Person\PageController@person');
 
 Route::post('/person/update', 'App\Http\Controllers\Person\UpdateController@run');

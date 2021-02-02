@@ -13,8 +13,10 @@ class UpdateController
         $validatedData = $req->validate([
             'id' => ['required', 'max:255']
         ]);
+
         $fields = ['nome', 'cognome', 'eta', 'altezzaInMetri', 'profilo'];
 
+        var_dump($req->post());die();
         $userId = $req->post('id');
         $user = User::findOrFail($userId);  //user da modificare
 
