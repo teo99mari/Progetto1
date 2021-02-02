@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="759fb905-dffe-4053-bc56-48ee08c48d19" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Person/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Person/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Person/UpdateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Person/UpdateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="759fb905-dffe-4053-bc56-48ee08c48d19" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,7 +181,7 @@
       <workItem from="1611935179148" duration="2199000" />
       <workItem from="1612174967524" duration="5707000" />
       <workItem from="1612187291353" duration="6549000" />
-      <workItem from="1612256409928" duration="6838000" />
+      <workItem from="1612256409928" duration="6843000" />
     </task>
     <servers />
   </component>
