@@ -26,3 +26,7 @@ Route::get('/person', function () {
 Route::get('/person/list', 'App\Http\Controllers\Person\ListController@run');
 
 Route::put('/person/add', 'App\Http\Controllers\Person\AddController@run');
+
+Route::put('/book/add', 'App\Http\Controllers\Book\AddController@run');
+
+Route::get('/book/search', 'App\Http\Controllers\book\SearchController@run');

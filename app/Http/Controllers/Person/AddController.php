@@ -11,11 +11,11 @@ class AddController
     public function run(Request $req)
     {
         /*$req->validate([
-            'nome' => ['required'],
-            'cognome' => ['required'],
-            'eta' => ['required','numeric'],
-            'altezzaInMetri' => ['required'],
-            'profilo' => ['required']
+            '*nome' => ['required'],
+            '*cognome' => ['required'],
+            '*eta' => ['required','numeric'],
+            '*altezzaInMetri' => ['required'],
+            '*profilo' => ['required']
         ]);
         */
         $returnValues = [
