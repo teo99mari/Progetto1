@@ -30,3 +30,5 @@ Route::put('/person/add', 'App\Http\Controllers\Person\AddController@run');
 Route::put('/book/add', 'App\Http\Controllers\Book\AddController@run');
 
 Route::get('/book/search', 'App\Http\Controllers\book\SearchController@run');
+
+Route::get('/animali/animali', 'App\Http\Controllers\animali\AnimaliApiController@run');
