@@ -13,8 +13,5 @@ class elefante extends animali
         parent::__construct($nome,$habitat);
         $this->verso = 'ARRR';
     }
-    public function verso(){
-        return $this->verso;
-    }
 
 }
