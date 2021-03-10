@@ -31,9 +31,7 @@ Route::put('/book/add', 'App\Http\Controllers\Book\AddController@run');
 
 Route::get('/book/search', 'App\Http\Controllers\book\SearchController@run');
 
-Route::get('/ristorante/ristorante', 'App\Http\Controllers\Ristorante\RistoranteApiController@setMenu');
-
-Route::put('/ristorante/add', 'App\Http\Controllers\Ristorante\AddRistoranteController@run');
+Route::put('/ristorante/insertmenu', 'App\Http\Controllers\Ristorante\InsertMenuController@run');
 
 Route::post('', 'App\Http\Controllers\@run');
 
