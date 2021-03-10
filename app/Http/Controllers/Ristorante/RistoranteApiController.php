@@ -1,10 +1,8 @@
 <?php
 
-
 namespace App\Http\Controllers\Ristorante;
 
-
-class RistoranteApiController extends RistoranteController
+class RistoranteApiController
 {
     public function getMenu(){
         $obj = new RistoranteController();
