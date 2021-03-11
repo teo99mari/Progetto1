@@ -10,16 +10,22 @@ class InsertMenuController {
     public function run (Request $req) {
         $data = $req->post();
 
-        $menu = new Menu;
-        $menu->antipasto = $data['antipasto'];
-        $menu->primo = $data['primo'];
-        $menu->secondo = $data['secondo'];
-        $menu->dolce = $data['dolce'];
-        $menu->save();
+        $menuIds = [];
+        foreach ($data as $element) {
+            $menu = new Menu;
+            $menu->antipasto = $element['antipasto'];
+            $menu->primo = $element['primo'];
+            $menu->secondo = $element['secondo'];
+            $menu->dolce = $element['dolce'];
+            $menu->giorno = $element['giorno'];
+            $menu->save();
+
+            $menuIds[] = $menu->id;
+        }
 
         return [
             'status' => 'ok',
-            'id' => $menu->id
+            'id' => $menuIds
         ];
     }
 }
