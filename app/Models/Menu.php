@@ -15,6 +15,7 @@ class Menu extends Model
      *
      * @var array
      */
+    protected $table = 'menu';
     protected $fillable = [
         'antipasto',
         'primo',

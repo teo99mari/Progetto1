@@ -33,5 +33,5 @@ Route::get('/book/search', 'App\Http\Controllers\book\SearchController@run');
 
 Route::put('/ristorante/insertmenu', 'App\Http\Controllers\Ristorante\InsertMenuController@run');
 
-Route::post('', 'App\Http\Controllers\@run');
+Route::get('ristorante/retrievingmenu', 'App\Http\Controllers\Ristorante\RetrievingController@run');
 
