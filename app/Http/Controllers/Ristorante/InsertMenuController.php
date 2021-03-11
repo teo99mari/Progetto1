@@ -7,21 +7,19 @@ use Illuminate\Http\Request;
 
 class InsertMenuController {
 
-    public function run(Request $req) {
-        $returnValues = [];
+    public function run (Request $req) {
         $data = $req->post();
 
-            $menu = new Menu;
-            $menu->antipasto = $data ['antipasto'];
-            $menu->primo = $data ['primo'];
-            $menu->secondo = $data ['secondo'];
-            $menu->dolce = $data ['dolce'];
+        $menu = new Menu;
+        $menu->antipasto = $data['antipasto'];
+        $menu->primo = $data['primo'];
+        $menu->secondo = $data['secondo'];
+        $menu->dolce = $data['dolce'];
+        $menu->save();
 
-            $menu->save();
-            $returnValues['ok'][]= $menu->id;
-        return ($returnValues);
-
+        return [
+            'status' => 'ok',
+            'id' => $menu->id
+        ];
     }
-
 }
-//var_dump($data['primo'] . ' - ' . $data['antipasto']); die;
