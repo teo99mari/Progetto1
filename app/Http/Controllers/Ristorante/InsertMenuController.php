@@ -12,15 +12,17 @@ class InsertMenuController {
 
         $menuIds = [];
         foreach ($data as $element) {
-            $menu = new Menu;
-            $menu->antipasto = $element['antipasto'];
-            $menu->primo = $element['primo'];
-            $menu->secondo = $element['secondo'];
-            $menu->dolce = $element['dolce'];
-            $menu->giorno = $element['giorno'];
-            $menu->save();
+            if(($element['giorno']) !== 'sabato'){
+                $menu = new Menu;
+                $menu->antipasto = $element['antipasto'];
+                $menu->primo = $element['primo'];
+                $menu->secondo = $element['secondo'];
+                $menu->dolce = $element['dolce'];
+                $menu->giorno = $element['giorno'];
+                $menu->save();
 
-            $menuIds[] = $menu->id;
+                $menuIds[] = $menu->id;
+            }
         }
 
         return [
