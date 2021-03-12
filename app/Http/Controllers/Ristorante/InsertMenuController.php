@@ -12,7 +12,7 @@ class InsertMenuController {
 
         $menuIds = [];
         foreach ($data as $element) {
-            if(($element['giorno']) !== 'sabato'){
+            if($element['giorno'] !== 'sabato' && $element['giorno'] !== 'domenica'){
                 $menu = new Menu;
                 $menu->antipasto = $element['antipasto'];
                 $menu->primo = $element['primo'];
