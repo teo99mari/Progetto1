@@ -35,3 +35,7 @@ Route::put('/ristorante/insertmenu', 'App\Http\Controllers\Ristorante\InsertMenu
 
 Route::get('ristorante/retrievingmenu', 'App\Http\Controllers\Ristorante\RetrievingController@run');
 
+route::get('/calcolatrice/calcola', 'App\Http\Controllers\Calcolatrice\ApiCalcolatriceController@run');
+
+
+
