@@ -4,31 +4,25 @@ namespace App\Http\Controllers\Calcolatrice;
 
 class Calcolatrice
 {
-    public $a;
-    public $b;
+    public function __construct(){}
 
-    public function __construct($a, $b){
-        $this->a = $a;
-        $this->b = $b;
+    public function somma($valore1, $valore2) {
+        return $valore1 + $valore2;
     }
 
-    public function somma(){
-        $somma = $this->a + $this->b;
-        return $somma;
+    public function differenza($valore1, $valore2) {
+        return $valore1 - $valore2;
     }
 
-    public function differenza(){
-        $differenza = $this->a - $this->b;
-        return $differenza;
+    public function moltiplicazione($valore1, $valore2) {
+        return $valore1 * $valore2;
     }
 
-    public function moltiplicazione(){
-        $moltiplicazione = $this->a * $this->b;
-        return $moltiplicazione;
-    }
+    public function divisione($valore1, $valore2) {
+        if ($valore2 != 0) {
+            return $valore1 / $valore2;
+        }
 
-    public function divisione(){
-        $divisione = $this->a / $this->b;
-        return $divisione;
+        return 'errore';
     }
 }

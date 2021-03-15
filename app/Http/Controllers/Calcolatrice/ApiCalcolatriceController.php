@@ -11,18 +11,25 @@ class ApiCalcolatriceController
         $valore2 = $req->get('valore2');
         $operazione = $req->get('operazione');
 
-        $obj = New Calcolatrice($valore1, $valore2);
-
-        if ($operazione === 'somma') {
-            return $obj->somma();
-        } else if ($operazione === 'differenza') {
-            return $obj->differenza();
-        }else if ($operazione === 'prodotto') {
-            return $obj->moltiplicazione();
-        }else if ($operazione === 'quoziente') {
-            return $obj->divisione();
-        } else {
-            return 'errore';
+        $obj = New Calcolatrice();
+        $risultato = null;
+        switch ($operazione) {
+            case 'somma':
+                $risultato = $obj->somma($valore1, $valore2);
+                break;
+            case 'differenza':
+                $risultato = $obj->differenza($valore1, $valore2);
+                break;
+            case 'prodotto':
+                $risultato = $obj->moltiplicazione($valore1, $valore2);
+                break;
+            case 'quoziente':
+                $risultato = $obj->divisione($valore1, $valore2);
+                break;
+            default:
+                $risultato = 'error';
         }
+
+        return $risultato;
     }
 }
