@@ -1,29 +1,33 @@
 <?php
 
-
 namespace App\Http\Controllers\Parola;
 
+class ParolaController {
 
-class ParolaController
-{
     public function vocali($parola){
         $vocali = 0;
+
         $parola = str_split($parola);
-        foreach ($parola as $lettera){
-            if($lettera == 'a' || $lettera == 'e' || $lettera == 'i' || $lettera == 'o' || $lettera == 'u'){
+        foreach ($parola as $lettera) {
+            if ($lettera == 'a' || $lettera == 'e' || $lettera == 'i' || $lettera == 'o' || $lettera == 'u') {
                 $vocali++;
             }
-        }return $vocali;
+        }
+
+        return $vocali;
     }
 
-    public function consonanti($parola){
+    public function consonanti($parola) {
         $consonanti = 0;
+
         $parola = str_split($parola);
-        foreach ($parola as $lettera){
-            if($lettera !== 'a' && $lettera !== 'e' && $lettera !== 'i' && $lettera !== 'o' && $lettera !== 'u'){
+        foreach ($parola as $lettera) {
+            if ($lettera !== 'a' && $lettera !== 'e' && $lettera !== 'i' && $lettera !== 'o' && $lettera !== 'u') {
                 $consonanti++;
             }
-        }return $consonanti;
+        }
+
+        return $consonanti;
     }
 
     public function checkMaggiore($parola){
@@ -34,6 +38,7 @@ class ParolaController
         if ($numeroVocali > $numeroConsonanti){
             $risultato = 'vocali';
         }
+
         return $risultato;
     }
 }

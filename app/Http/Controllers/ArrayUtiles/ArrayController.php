@@ -1,43 +1,48 @@
 <?php
 
-
 namespace App\Http\Controllers\ArrayUtiles;
 
-class ArrayController
-{
+class ArrayController {
 
-    public function numMax($array){
+    public function getMaxValueFromArray($array) {
         $numMax = 0;
-        foreach ($array as $value){
-            if ($value > $numMax){
+
+        foreach ($array as $value) {
+            if ($value > $numMax) {
                 $numMax = $value;
             }
         }
+
         return $numMax;
     }
-    public function numRip($array, $numero){
-        $cont = 0;
-        foreach ($array as $value){
-            if ($value == $numero){
-                $cont++;
+
+    public function getNumberOccurencyInArray($array, $numero){
+        $occurrencyNumber = 0;
+
+        foreach ($array as $value) {
+            if ($value === $numero) {
+                $occurrencyNumber++;
             }
         }
-        return $cont;
+
+        return $occurrencyNumber;
     }
 
-    public function pariDisp($array){
-        $numPari = [
-            'Numeri pari' => []
-        ];
-        $numDisp = [
-            'Numeri dispari' => []
-        ];
-        foreach ($array as $value){
-            if ($value % 2 == 0){
-                $numPari []= $value;
-            } else{
-                $numDisp []= $value;
+    public function getOddAndEvendFromArray($array) {
+        $odd = [];
+        $even = [];
+
+        foreach ($array as $value) {
+            if ($value % 2 === 0) {
+                $even[] = $value;
+            } else {
+                $odd[] = $value;
             }
-        }return [$numPari,$numDisp];
+        }
+
+        return [
+            'even' => $even,
+            'odd' => $odd
+        ];
     }
 }
