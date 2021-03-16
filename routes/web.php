@@ -37,5 +37,8 @@ Route::get('ristorante/retrievingmenu', 'App\Http\Controllers\Ristorante\Retriev
 
 route::get('/calcolatrice/calcola', 'App\Http\Controllers\Calcolatrice\ApiCalcolatriceController@run');
 
+route::get('/parola/checkparola', 'App\Http\Controllers\Parola\ApiParolaController@run');
+
+
 
 
