@@ -39,6 +39,8 @@ route::get('/calcolatrice/calcola', 'App\Http\Controllers\Calcolatrice\ApiCalcol
 
 route::get('/parola/checkparola', 'App\Http\Controllers\Parola\ApiParolaController@run');
 
+route::get('/ArrayUtiles/retriewArray', 'App\Http\Controllers\ArrayUtiles\ArrayApiController@run');
+
 
 
 
