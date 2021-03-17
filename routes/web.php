@@ -41,6 +41,8 @@ route::get('/parola/checkparola', 'App\Http\Controllers\Parola\ApiParolaControll
 
 route::get('/ArrayUtiles/retriewArray', 'App\Http\Controllers\ArrayUtiles\ArrayApiController@run');
 
+route::get('/IdentityCardGenerator/insert', 'App\Http\Controllers\IdentityCardGenerator\IdentityCardApiController@run');
+
 
 
 

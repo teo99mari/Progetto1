@@ -23,10 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="759fb905-dffe-4053-bc56-48ee08c48d19" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArrayUtiles/ArrayApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArrayUtiles/ArrayApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArrayUtiles/ArrayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArrayUtiles/ArrayController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Parola/ApiParolaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Parola/ApiParolaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Parola/ParolaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Parola/ParolaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/IdentityCardGenerator/IdentityCard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/IdentityCardGenerator/IdentityCardApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +216,7 @@
       <workItem from="1614588893884" duration="14000" />
       <workItem from="1615195397597" duration="29773000" />
       <workItem from="1615381441485" duration="2108000" />
-      <workItem from="1615882275909" duration="23278000" />
+      <workItem from="1615882275909" duration="34600000" />
     </task>
     <servers />
   </component>
