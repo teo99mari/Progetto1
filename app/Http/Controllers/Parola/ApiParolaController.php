@@ -5,34 +5,30 @@ use Illuminate\Http\Request;
 
 class ApiParolaController {
 
-    public function run(Request $req)
-    {
-        $parola = $req->post();
-        $scelta = $req->get('scelta');
+    public function run(Request $req) {
+        $wordsArray = $req->post();
+        $choice = $req->get('scelta');
 
         $obj = new ParolaController();
 
-        $array = [];
-
-        foreach ($parola as $value) {
-        if ($scelta == 'vocali') {
-            return $obj->vocali($value);
-        } else if ($scelta == 'consonanti') {
-            return $obj->consonanti($value);
-        } else {
-            return [$obj->vocali($value), $obj->consonanti($value)];
+        $returnValues = [];
+        foreach ($wordsArray as $word) {
+            if ($choice === 'vocali') {
+                $returnValues[$word] = [
+                    'vocali' => $obj->vocali($word)
+                ];
+            } else if ($choice === 'consonanti') {
+                $returnValues[$word] = [
+                    'consonanti' => $obj->consonanti($word)
+                ];
+            } else {
+                $returnValues[$word] = [
+                    'vocali' => $obj->vocali($word),
+                    'consonanti' => $obj->consonanti($word)
+                ];
+            }
         }
-    }
-        $data = [];
 
-        foreach ($parola as $value) {
-        $data [$value] = [
-            'vocali' => $obj->vocali($value),
-            'consonanti' => $obj->consonanti($value),
-            'checkMaggiore' => $obj->checkMaggiore($value)
-        ];
-
-        }
-        return $data;
+        return $returnValues;
     }
 }
