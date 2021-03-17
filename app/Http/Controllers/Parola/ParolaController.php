@@ -7,6 +7,7 @@ class ParolaController {
     public function vocali($parola){
         $vocali = 0;
 
+
         $parola = str_split($parola);
         foreach ($parola as $lettera) {
             if ($lettera == 'a' || $lettera == 'e' || $lettera == 'i' || $lettera == 'o' || $lettera == 'u') {
