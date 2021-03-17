@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 class ApiParolaController {
 
     public function run(Request $req) {
-        $parola = $req->get('parola');
+        $parola = $req->post();
 
         $obj = new ParolaController();
 
