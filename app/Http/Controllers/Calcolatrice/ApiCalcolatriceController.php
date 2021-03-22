@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Calcolatrice;
 
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Callable_;
 
 class ApiCalcolatriceController
 {
@@ -11,7 +12,22 @@ class ApiCalcolatriceController
         $valore2 = $req->get('valore2');
         $operazione = $req->get('operazione');
 
-        $risultato = null;
+
+        $obj = new Calcolatrice();
+        $result = [
+           'Type:'=> $obj->getType(),
+           'NumeroFunzioni:'=>$obj->getNumeroFunzioni()
+        ];
+        
+        $obj2 = new CalcolatriceScientifica();
+        $result2 = [
+            'Type:'=>$obj2->getType(),
+            'NumeroFunzioni:'=>$obj2->getNumeroFunzioni()
+        ];
+        return $result;
+
+
+        /*$risultato = null;
         switch ($operazione) {
             case 'somma':
                 $risultato = Calcolatrice::somma($valore1, $valore2);
@@ -29,6 +45,6 @@ class ApiCalcolatriceController
                 $risultato = 'error';
         }
 
-        return $risultato;
+        return $risultato;*/
     }
 }
