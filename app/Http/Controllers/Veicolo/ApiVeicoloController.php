@@ -5,28 +5,22 @@ use Illuminate\Http\Request;
 
 class ApiVeicoloController
 {
-    public function run(Request $req){
+    public function run (Request $req) {
+        $automobileObj = new Automobile(4,'ABCDEF', 210);
+        $motociclettaObj = new Motocicletta(2,'GHIL', 180);
 
-        $obj = new Veicolo(6);
-        $obj->setTarga('QWERTY');
-        $obj2 = new Automobile(4,'ABCDEF');
-        $obj2->setVMax(130);
-        $obj3 = new Motocicletta(2,'GHIL');
-        $obj3->setVMax(50);
         return [
+           [
+               'type' => 'Automobile',
+               'numero_ruote' => $automobileObj->getNumRuote(),
+               'velocità_massima' => $automobileObj->getVMax(),
+               'azione' => $automobileObj->azionaTergicristallo()
+           ],
             [
-                'NumeroRuote'=>$obj->getNumRuote(),
-                'Targa'=>$obj->getTarga()
-            ],
-            [
-                'Targa'=>$obj2->getTarga(),
-                'NumeroRuote'=>$obj2->getNumRuote(),
-                'VMax'=>$obj2->getVMax()
-            ],
-            [
-                'Targa'=>$obj3->getTarga(),
-                'NumeroRuote'=>$obj3->getNumRuote(),
-                'VMax'=>$obj3->getVMax()
+                'type' => 'Motocicletta',
+                'numero_ruote' => $motociclettaObj->getNumRuote(),
+                'velocità_massima' => $motociclettaObj->getVMax(),
+                'azione' => $motociclettaObj->mettiCasco()
             ]
         ];
     }

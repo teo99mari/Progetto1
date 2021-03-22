@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers\Veicolo;
 
-class Automobile extends Veicolo
-{
-    protected $VMax;
+class Automobile extends Veicolo {
 
-    public function __construct($numeroRuote,$targa){
-        parent::__construct($numeroRuote);
+    public function __construct($numeroRuote, $targa, $VMax) {
+        $this->numeroRuote = $numeroRuote;
         $this->targa = $targa;
-    }
-    public function setVMax($VMax){
         $this->VMax = $VMax;
     }
-    public function getVMax(){
-        return $this->VMax;
+
+    public function azionaTergicristallo() {
+        return 'Vetri puliti';
     }
-    public function getNumRuote(){
-        return $this->numeroRuote;
+
+    public function mettiCintura() {
+        return 'Cintura messa';
     }
 }

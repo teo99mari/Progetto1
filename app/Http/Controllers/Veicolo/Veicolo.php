@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers\Veicolo;
 
-class Veicolo
-{
+class Veicolo {
     protected $numeroRuote;
     protected $targa;
+    protected $VMax;
 
-    public function __construct($numeroRuote){
-        $this->numeroRuote = $numeroRuote;
-    }
-    public function setTarga($targa){
-        $this->targa = $targa;
-    }
-    public function getTarga(){
+    public function getTarga() {
         return $this->targa;
     }
-    public function getNumRuote(){
+
+    public function getNumRuote() {
         return $this->numeroRuote;
+    }
+
+    public function getVMax() {
+        return $this->VMax;
     }
 }
