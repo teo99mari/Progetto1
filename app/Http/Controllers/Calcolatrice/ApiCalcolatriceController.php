@@ -12,19 +12,29 @@ class ApiCalcolatriceController
         $valore2 = $req->get('valore2');
         $operazione = $req->get('operazione');
 
-
-        $obj = new Calcolatrice();
-        $result = [
-           'Type:'=> $obj->getType(),
-           'NumeroFunzioni:'=>$obj->getNumeroFunzioni()
-        ];
-        
+        $obj  = new Calcolatrice();
         $obj2 = new CalcolatriceScientifica();
-        $result2 = [
-            'Type:'=>$obj2->getType(),
-            'NumeroFunzioni:'=>$obj2->getNumeroFunzioni()
+        $obj3 = new CalcolatriceScientifica();
+        $obj3->setNumFunctions(12);
+
+        return [
+            [
+                'type' => $obj->getType(),
+                'num_function' => $obj->getNumeroFunzioni(),
+            ],
+            [
+                'type' => $obj2->getType(),
+                'num_function' => $obj2->getNumeroFunzioni(),
+            ],
+            [
+                'type' => $obj3->getType(),
+                'num_function' => $obj3->getNumeroFunzioni(),
+            ],
+            [
+                'type' => $obj2->getType(),
+                'num_function' => $obj2->getNumeroFunzioni(),
+            ]
         ];
-        return $result;
 
 
         /*$risultato = null;

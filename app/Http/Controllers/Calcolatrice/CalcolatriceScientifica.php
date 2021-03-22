@@ -20,4 +20,8 @@ class CalcolatriceScientifica extends Calcolatrice
     public function sommaValStatico($valore1){
        return $valore1 + 10;
     }
+
+    public function setNumFunctions($numFunctions) {
+        $this->numeroDiFunzioni = $numFunctions;
+    }
 }
