@@ -15,7 +15,7 @@ class ApiCalcolatriceController
         $obj  = new Calcolatrice();
         $obj2 = new CalcolatriceScientifica();
         $obj3 = new CalcolatriceScientifica();
-        $obj3->setNumFunctions(12);
+        $obj3->setNumFunctions(20);
 
         return [
             [

@@ -43,6 +43,8 @@ route::get('/ArrayUtiles/retriewArray', 'App\Http\Controllers\ArrayUtiles\ArrayA
 
 route::get('/IdentityCardGenerator/insert', 'App\Http\Controllers\IdentityCardGenerator\IdentityCardApiController@run');
 
+route::get('/veicolo/retiew', 'App\Http\Controllers\Veicolo\ApiVeicoloController@run');
+
 
 
 
