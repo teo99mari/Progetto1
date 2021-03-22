@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Calcolatrice;
 
 class Calcolatrice
 {
+    protected $type = 'calcolatrice';
+    protected $numeroDiFunzioni = 4;
 
     public static function somma($valore1, $valore2) {
         return $valore1 + $valore2;
@@ -23,5 +25,13 @@ class Calcolatrice
         }
 
         return 'errore';
+    }
+
+    public function getType(){
+        return $this->type;
+    }
+
+    public function getNumeroFunzioni(){
+        return $this->numeroDiFunzioni;
     }
 }

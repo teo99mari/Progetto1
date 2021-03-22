@@ -4,14 +4,9 @@ namespace App\Http\Controllers\Calcolatrice;
 
 class CalcolatriceScientifica extends Calcolatrice
 {
-    protected $calcolatriceScientifica;
-
-    public function __construct($calcolatrice, $calcolatriceScientifica){
-        parent::__construct($calcolatrice);
-        $this->calcolatriceScientifica = $calcolatriceScientifica;
-    }
-    public function getType(){
-        return $this->calcolatriceScientifica;
+    public function __construct() {
+        $this->numeroDiFunzioni = 7;
+        $this->type = 'calcolatrice_scientifica';
     }
 
     public function potenza($valore1,$valore2){
