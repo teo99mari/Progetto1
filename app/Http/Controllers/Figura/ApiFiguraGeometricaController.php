@@ -6,19 +6,20 @@ use Illuminate\Http\Request;
 class ApiFiguraGeometricaController
 {
     public function run (Request $req){
-     $QuadratoObj = new QuadratoController(2,4,4);
-     $TriangoloObj = new TriangoloController(3,4,5,6);
+     $quadratoObj = new QuadratoController(2,4); //Istanzio classe figlia e NON posso istanziare classe padre astratta
+     $triangoloObj = new TriangoloController(3,4,6,7);
 
      return [
-         'Quadrato'=>[
-             'NumeroLati'=>$QuadratoObj->getNumeroLati(),
-             'CalcoloPerimetro'=>$QuadratoObj->calcolaPerimetro($latoA,$latoB),
-             'CalcoloArea'=>$QuadratoObj->calcolaArea($latoA,$latoB)
+         'quadrato' => [
+             'numero_lati' => $quadratoObj->getNumeroLati(),
+             'perimetro'   => $quadratoObj->calcolaPerimetro(),
+             'area'        => $quadratoObj->calcolaArea(),
+             'diagonale'   => $quadratoObj->calcolaDiagonale(),
          ],
-         'Triangolo'=>[
-             'NumeroLati'=>$TriangoloObj->getNumeroLati(),
-             'CalcoloPerimetro'=>$TriangoloObj->calcolaPerimetro($latoA,$latoB,$latoC),
-             'CalcoloArea'=>$TriangoloObj->calcolaArea($latoA,$latoB,$latoC)
+         'triangolo' => [
+             'numero_lati' => $triangoloObj->getNumeroLati(),
+             'perimetro' => $triangoloObj->calcolaPerimetro(),
+             'area' => $triangoloObj->calcolaArea()
          ]
      ];
     }

@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers\Figura;
 
-class TriangoloController extends FiguraGeometricaController
-{
+class TriangoloController extends FiguraGeometricaController {
     protected $latoA;
     protected $latoB;
     protected $latoC;
@@ -15,13 +14,12 @@ class TriangoloController extends FiguraGeometricaController
         $this->latoC = $latoC;
     }
 
-    public function calcolaPerimetro($latoA,$latoB,$latoC){
-        $result = $latoA + $latoB + $latoC;
-        return $result;
+    public function calcolaPerimetro() {
+        return $this->latoA + $this->latoB + $this->latoC;
     }
-    public function calcolaArea($latoA,$latoB,$latoC){
-        $p = ($latoA + $latoB + $latoC) % 2;
-        $result = sqrt($p * ($p - $latoA) * ($p - $latoB) * ($p - $latoC));
-        return $result;
+
+    public function calcolaArea() {
+        $p = $this->calcolaPerimetro() / 2;
+        return sqrt($p * ($p - $this->latoA) * ($p - $this->latoB) * ($p - $this->latoC));
     }
 }
