@@ -3,20 +3,23 @@
 namespace App\Http\Controllers\Figura;
 
 class RomboController extends FiguraGeometricaController{
-    protected $latoA;
+    protected $lato;
     protected $altezza;
+    protected $diagonaleMaggiore;
+    protected $diagonaleMinore;
 
-    public function __construct($numeroLati,$latoA,$altezza){
+    public function __construct($numeroLati, $lato, $diagonaleMaggiore, $diagonaleMinore){
         $this->numeroLati = $numeroLati;
-        $this->latoA = $latoA;
-        $this->altezza = $altezza;
+        $this->latoA = $lato;
+        $this->diagonaleMaggiore = $diagonaleMaggiore;
+        $this->diagonaleMinore = $diagonaleMinore;
     }
 
     public function calcolaPerimetro(){
-        return $this->latoA * 4;
+        return $this->lato * 4;
     }
 
     public function calcolaArea(){
-        return $this->latoA * $this->altezza;
+        return ($this->diagonaleMaggiore * $this->diagonaleMinore) / 2;
     }
 }
