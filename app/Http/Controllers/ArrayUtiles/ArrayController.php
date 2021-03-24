@@ -12,6 +12,7 @@ class ArrayController implements ArrayInterface {
                 $numMax = $value;
             }
         }
+
         return $numMax;
     }
 
@@ -23,6 +24,7 @@ class ArrayController implements ArrayInterface {
                 $occurrencyNumber++;
             }
         }
+
         return $occurrencyNumber;
     }
 

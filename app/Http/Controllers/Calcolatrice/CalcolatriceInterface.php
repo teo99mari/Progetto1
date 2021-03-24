@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Calcolatrice;
 
-interface CalcolatriceInterface{
+interface CalcolatriceInterface {
 
     function getType();
 
     function getNumeroFunzioni();
-
 }

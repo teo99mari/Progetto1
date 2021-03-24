@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers\animali;
 
-interface animaliInterface{
+interface animaliInterface {
 
     function verso();
-
 }

@@ -9,7 +9,8 @@ class AddController {
 
     public function run(Request $req) {
         $returnValues = [];
-        foreach ($req->post()as $bookDb) {
+
+        foreach ($req->post() as $bookDb) {
             $books = new Book;
             $books->titolo = $bookDb ['titolo'];
             $books->pagine = $bookDb ['pagine'];
@@ -18,6 +19,7 @@ class AddController {
             $books->save();
             $returnValues['ok'][] = $books->id;
         }
+
         return ($returnValues);
     }
 }

@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Figura;
 
 class TriangoloController extends FiguraGeometricaController {
+
     protected $latoA;
     protected $latoB;
     protected $latoC;
 
-    public function __construct($numeroLati,$latoA,$latoB,$latoC){
+    public function __construct($numeroLati,$latoA,$latoB,$latoC) {
         $this->numeroLati = $numeroLati;
         $this->latoA = $latoA;
         $this->latoB = $latoB;

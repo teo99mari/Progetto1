@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Calcolatrice;
 
-class Calcolatrice implements CalcolatriceInterface
-{
+class Calcolatrice implements CalcolatriceInterface {
+
     protected $type = 'calcolatrice';
     protected $numeroDiFunzioni = 4;
 
@@ -27,11 +27,11 @@ class Calcolatrice implements CalcolatriceInterface
         return 'errore';
     }
 
-    public function getType(){
+    public function getType() {
         return $this->type;
     }
 
-    public function getNumeroFunzioni(){
+    public function getNumeroFunzioni() {
         return $this->numeroDiFunzioni;
     }
 }

@@ -4,9 +4,9 @@
 namespace App\Http\Controllers\IdentityCardGenerator;
 use Illuminate\Http\Request;
 
-class IdentityCardApiController
-{
-    public function run(Request $req){
+class IdentityCardApiController {
+
+    public function run(Request $req) {
         $name = $req->get('name');
         $surname = $req->get('surname');
         $yearsOld = $req->get('BornYear');

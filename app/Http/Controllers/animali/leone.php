@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\animali;
 
-class leone extends animali {
+class leone extends Animali {
 
     protected $verso;
 
@@ -11,8 +11,7 @@ class leone extends animali {
         $this->verso = 'GRRR';
     }
 
-    public function verso(){
+    public function verso() {
        return $this->verso;
     }
-
 }

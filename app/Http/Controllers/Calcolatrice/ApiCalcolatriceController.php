@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Calcolatrice;
 
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Types\Callable_;
 
-class ApiCalcolatriceController
-{
+class ApiCalcolatriceController {
+
     public function run(Request $req) {
         $valore1 = $req->get('valore1');
         $valore2 = $req->get('valore2');

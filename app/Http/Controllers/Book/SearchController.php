@@ -5,16 +5,16 @@ use App\Models\Book;
 use Illuminate\Http\Request;
 
 class SearchController {
-    public function run(Request $req) {
-        /*$test = Book::where('pagine', '>=', '200' )->select('titolo','id','isbn')->get(); return $test;*/
 
+    public function run(Request $req) {
         $emptyArray = [];
-        $libri = Book::all()->toArray();
-        foreach ($libri as $libro){
+
+        foreach (Book::all()->toArray() as $libro) {
             if (($libro['pagine']) >= 200) {
-                $emptyArray[]= $libro['titolo'];
+                $emptyArray[] = $libro['titolo'];
             }
         }
-        return ($emptyArray);
+
+        return $emptyArray;
     }
 }

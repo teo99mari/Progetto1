@@ -6,15 +6,16 @@ use Illuminate\Http\Request;
 class AnimaliApiController {
 
     public function run(Request $req) {
-        if(($req->animale) == 'leone') {
+        $returnValue = null;
 
+        if (($req->animale) === 'leone') {
             $obj = new leone('luca', 'savana');
-            return $obj->verso();
-
-            } elseif(($req->animale) == 'elefante') {
-
+            $returnValue = $obj->verso();
+        } elseif (($req->animale) == 'elefante') {
             $obj = new elefante('marco','parco');
-            return $obj->verso();
+            $returnValue = $obj->verso();
         }
+
+        return $returnValue;
     }
 }

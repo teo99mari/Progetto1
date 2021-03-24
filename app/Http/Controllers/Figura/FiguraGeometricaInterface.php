@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Figura;
 
-interface FiguraGeometricaInterface{
+interface FiguraGeometricaInterface {
 
     function getNumeroLati();
 
     function calcolaPerimetro();
 
     function calcolaArea();
-
 }
