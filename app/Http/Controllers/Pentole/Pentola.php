@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Pentole;
 
-abstract class Pentola {
+abstract class Pentola implements PentolaInterface {
     //Non può essere istanzata (non posso fare new Pentola)
 
     //Può contentere attributi

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Calcolatrice;
 
-class Calcolatrice
+class Calcolatrice implements CalcolatriceInterface
 {
     protected $type = 'calcolatrice';
     protected $numeroDiFunzioni = 4;

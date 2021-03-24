@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\ArrayUtiles;
 
-class ArrayController {
+class ArrayController implements ArrayInterface {
 
     public function getMaxValueFromArray($array) {
         $numMax = 0;
@@ -12,11 +12,10 @@ class ArrayController {
                 $numMax = $value;
             }
         }
-
         return $numMax;
     }
 
-    public function getNumberOccurencyInArray($array, $numero){
+    public function getNumberOccurencyInArray($array, $numero) {
         $occurrencyNumber = 0;
 
         foreach ($array as $value) {
@@ -24,7 +23,6 @@ class ArrayController {
                 $occurrencyNumber++;
             }
         }
-
         return $occurrencyNumber;
     }
 

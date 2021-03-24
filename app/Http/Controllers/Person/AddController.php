@@ -1,15 +1,12 @@
 <?php
 
-
 namespace App\Http\Controllers\Person;
 
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class AddController
-{
-    public function run(Request $req)
-    {
+class AddController {
+    public function run(Request $req) {
         /*$req->validate([
             '*nome' => ['required'],
             '*cognome' => ['required'],

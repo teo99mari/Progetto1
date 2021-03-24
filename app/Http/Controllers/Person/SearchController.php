@@ -8,10 +8,8 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
-class SearchController
-{
-    public function run(Request $req)
-    {
+class SearchController {
+    public function run(Request $req) {
         $user = User::where('nome', 'like', 'matteo')->first(); //il primo utente di nome matteo
         $books = $user->books()->get(); //tutti i libri appartenenti allo user di nome matteo
 
