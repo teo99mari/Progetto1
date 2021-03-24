@@ -1,17 +1,15 @@
 <?php
 
-
 namespace App\Http\Controllers\Book;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
 
-class AddController
-{
-    public function run(Request $req)
-    {
+class AddController {
+
+    public function run(Request $req) {
         $returnValues = [];
-        foreach ($req->post()as $bookDb){
+        foreach ($req->post()as $bookDb) {
             $books = new Book;
             $books->titolo = $bookDb ['titolo'];
             $books->pagine = $bookDb ['pagine'];
@@ -19,6 +17,7 @@ class AddController
             $books->isbn = $bookDb ['isbn'];
             $books->save();
             $returnValues['ok'][] = $books->id;
-        }return ($returnValues);
+        }
+        return ($returnValues);
     }
 }

@@ -1,15 +1,12 @@
 <?php
 
-
 namespace App\Http\Controllers\Person;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 
-class UpdateController
-{
-    public function run(Request $req)
-    {
+class UpdateController {
+    public function run(Request $req) {
         $validatedData = $req->validate([
             'id' => ['required', 'max:255']
         ]);

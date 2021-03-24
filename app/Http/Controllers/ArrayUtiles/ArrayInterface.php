@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers\ArrayUtiles;
 
-interface ArrayInterface{
+interface ArrayInterface {
 
-    function getMaxValueFromArray();
+    function getMaxValueFromArray($array);
 
-    function getNumberOccurencyInArray();
+    function getNumberOccurencyInArray($array, $numero);
 
-    function getOddAndEvendFromArray();
-
-    
+    function getOddAndEvendFromArray($array);
 }

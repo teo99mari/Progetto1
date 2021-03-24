@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Parola;
 
 class ParolaController implements ParolaInterface {
 
-    public function vocali($parola){
+    public function vocali($parola) {
         $vocali = 0;
 
 
@@ -31,12 +31,12 @@ class ParolaController implements ParolaInterface {
         return $consonanti;
     }
 
-    public function checkMaggiore($parola){
+    public function checkMaggiore($parola) {
         $numeroVocali = $this->vocali($parola);
         $numeroConsonanti = $this->consonanti($parola);
 
         $risultato = 'consonanti';
-        if ($numeroVocali > $numeroConsonanti){
+        if ($numeroVocali > $numeroConsonanti) {
             $risultato = 'vocali';
         }
 

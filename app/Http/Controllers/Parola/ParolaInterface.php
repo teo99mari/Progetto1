@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Parola;
 
 interface ParolaInterface{
 
-    function vocali();
+    function vocali($parola);
 
-    function consonanti();
+    function consonanti($parola);
 
-    function checkMaggiore();
+    function checkMaggiore($parola);
 }

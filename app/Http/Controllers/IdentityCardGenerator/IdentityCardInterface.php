@@ -4,9 +4,9 @@ namespace App\Http\Controllers\IdentityCardGenerator;
 
 interface IdentityCardInterface{
 
-    function getStringSplittedByNumber();
+    function getStringSplittedByNumber($string, $length);
 
-    function yearsOld();
+    function yearsOld($birthYear);
 
-    function legal();
+    function legal($birthYear);
 }

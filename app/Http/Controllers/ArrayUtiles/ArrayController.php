@@ -12,11 +12,10 @@ class ArrayController implements ArrayInterface {
                 $numMax = $value;
             }
         }
-
         return $numMax;
     }
 
-    public function getNumberOccurencyInArray($array, $numero){
+    public function getNumberOccurencyInArray($array, $numero) {
         $occurrencyNumber = 0;
 
         foreach ($array as $value) {
@@ -24,7 +23,6 @@ class ArrayController implements ArrayInterface {
                 $occurrencyNumber++;
             }
         }
-
         return $occurrencyNumber;
     }
 
