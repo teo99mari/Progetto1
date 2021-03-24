@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Parola;
 
-class ParolaController {
+class ParolaController implements ParolaInterface {
 
     public function vocali($parola){
         $vocali = 0;

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Figura;
 
-abstract class FiguraGeometricaController { //Classe astratta che rappresenta una generica figura
+abstract class FiguraGeometricaController implements FiguraGeometricaInterface { //Classe astratta che rappresenta una generica figura
     protected $numeroLati; //Le figure hanno in comune il numero di lati
 
     public function  getNumeroLati() { //Metodo per ritornare il numero di lati di una figura

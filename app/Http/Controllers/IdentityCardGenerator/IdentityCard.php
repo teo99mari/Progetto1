@@ -4,7 +4,7 @@ namespace App\Http\Controllers\IdentityCardGenerator;
 
 use DateTime;
 
-class IdentityCard
+class IdentityCard implements IdentityCardInterface
 {
     public function getStringSplittedByNumber($string, $length) {
         $result = str_split($string, $length);

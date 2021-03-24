@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\ArrayUtiles;
 
-class ArrayController {
+class ArrayController implements ArrayInterface {
 
     public function getMaxValueFromArray($array) {
         $numMax = 0;

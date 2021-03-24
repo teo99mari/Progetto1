@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Veicolo;
 
-class Veicolo {
+class Veicolo implements VeicoloInterface {
     protected $numeroRuote;
     protected $targa;
     protected $VMax;

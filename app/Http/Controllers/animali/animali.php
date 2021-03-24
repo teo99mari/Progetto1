@@ -4,8 +4,7 @@
 namespace App\Http\Controllers\animali;
 
 
-abstract class animali
-{
+abstract class animali implements animaliInterface {
     protected $nome;
     protected $habitat;
 
