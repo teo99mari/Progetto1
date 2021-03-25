@@ -3,28 +3,22 @@
 namespace App\Http\Controllers\FunzioniVitali;
 
 class CaneController extends AnimaleController {
-    protected $respira;
-    protected $peso;
 
-    public function __construct($respira, $peso) {
-        $this->respira = $respira;
+    public function __construct($habitat, $coda, $peso) {
+        $this->habitat = $habitat;
+        $this->coda = $coda;
         $this->peso = $peso;
     }
 
+    public function haIlChip() {
+        return true;
+    }
+
     public function mangia($cibo) {
-        return 'croccantini';
+        return 'Ho mangiato ' . $cibo;
     }
 
     public function dormi($quantita_ore) {
-        return null;
+        return 'Ho dormito per ' . $quantita_ore . ' ore';
     }
-
-    public function respira() {
-        return $this->respira;
-    }
-
-    public function peso(){
-        return $this->peso;
-    }
-
 }

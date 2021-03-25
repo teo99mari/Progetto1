@@ -3,22 +3,28 @@
 namespace App\Http\Controllers\FunzioniVitali;
 
 class TartarugaController extends AnimaleController {
+    protected $eta;
 
-    protected $respira;
+    public function __construct($habitat, $coda, $peso, $eta) {
+        $this->habitat = $habitat;
+        $this->coda = $coda;
+        $this->peso = $peso;
+        $this->eta = $eta;
+    }
 
-    public function __construct($respira) {
-        $this->respira = $respira;
+    public function isCentenaria() {
+        if ($this->eta >= 100) {
+            return 'è centenaria';
+        }
+
+        return 'non è centenaria';
     }
 
     public function mangia($cibo) {
-        return 'insalata';
+        return 'Ho mangiato ' . $cibo;
     }
 
     public function dormi($quantita_ore) {
-        return '10';
-    }
-
-    function respira() {
-        return $this->respira;
+        return 'Ho dormito per ' . $quantita_ore . ' ore';
     }
 }
