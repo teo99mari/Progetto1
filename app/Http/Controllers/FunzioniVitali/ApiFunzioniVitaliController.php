@@ -9,8 +9,8 @@ class ApiFunzioniVitaliController {
 
         $calciatoreObj = new CalciatoreController('si','attaccante');
         $dirigenteObj = new DirigenteController('si',70000);
-        $caneObj = new CaneController('si',30);
-        $tartarugaObj = new TartarugaController('si');
+        //$caneObj = new CaneController('si',30);
+        //$tartarugaObj = new TartarugaController('si');
 
         return [
             'calciatore' =>[
@@ -25,7 +25,7 @@ class ApiFunzioniVitaliController {
                 'ruolo'   =>    $dirigenteObj->stipendio(),
                 'respiro' =>    $dirigenteObj->respira()
             ],
-            'cane' =>[
+            /* 'cane' =>[
                 'Cibo'    =>    $caneObj->mangia('croccantini'),
                 'Sonno'   =>    $caneObj->dormi(''),
                 'ruolo'   =>    $caneObj->peso(),
@@ -35,7 +35,7 @@ class ApiFunzioniVitaliController {
                 'Cibo'    =>    $tartarugaObj->mangia('insalata'),
                 'Sonno'   =>    $tartarugaObj->dormi('10'),
                 'respiro' =>    $tartarugaObj->respira()
-            ],
+            ], */
         ];
     }
 }
